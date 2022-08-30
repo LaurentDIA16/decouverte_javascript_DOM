@@ -1,0 +1,54 @@
+* {
+    margin:0;
+    padding:0;
+    color:blue;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+/* composition de la page en 2 colonnes 70/30  (old skill) */
+main > article { 
+    float:left;
+    width:70% ;
+}
+aside {
+    float:left;
+    width:30% ;
+}
+#prefooter {
+    clear:left;
+}
+
+/* mise en beauté globale de la page . LOL */
+body {
+    background-color:bisque;
+    margin:10px 100px;
+}
+nav, footer {
+    margin-top: 10px;
+    background-color: blueviolet;
+    color:white;
+}
+aside {
+    background-color:aliceblue ;
+}
+
+/* mise en beauté fine de la page . LOL */
+h1 {
+    color:  #f33;
+    margin-top:20px ;
+}
+div {
+    color:green;
+}
+ul{
+    border: 1px solid blueviolet ;
+    margin : 0px ;
+    background-color: #bababa;
+}
+li{
+    margin-left:30px;
+}
+button {
+    width: 150px;
+    font-size: 1.5em ;
+    color: #f33;
+}
