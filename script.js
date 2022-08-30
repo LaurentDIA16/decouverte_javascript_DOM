@@ -1,7 +1,13 @@
-
-
-
-
+alert("hello");
+let elemButton = document.getElementsByTagName("button");
+let bouton2 = elemButton[1];
+bouton2.addEventListener(
+    "click",
+    function () {
+        let today = "28/02/20220";
+        let message = new Date();
+        alert("je viens le " + today + "et plus préceisément le" + message);
+});
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
