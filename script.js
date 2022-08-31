@@ -1,15 +1,32 @@
+// Création de la Function recupereUL en actionnant le bouton UN
 let elemButton = document.getElementsByTagName("button");
 let button1 = elemButton[0];
 button1.addEventListener("click",recupereUL);
 
 function recupereUL(){
     // le DOM va chercher la 2e balise ul du fichier HTML et donner les textes associés
-    let text = document.getElementsByTagName("ul")[1].outerText;
+    let text = document.getElementsByTagName("ul")[1].innerHTML;
+    console.log(text)
     alert("Voici les animaux de la liste: \n "+ text);
 
     // on va aller mettre la liste d'animaux à l'endroit de l'ID "nouvelleListe"
     document.getElementById("nouvelleListe").innerHTML = text;
 }
+
+// Création de la Function recupereUL en actionnant le bouton DEUX et querySelector
+let elemButtonbis = document.getElementsByTagName("button");
+let button2 = elemButtonbis[1];
+button1.addEventListener("click",recupereUL2);
+
+function recupereUL2(){
+
+
+}
+// Utilisation de querySelectorAll
+const nodeList= document.querySelectorAll("ul");
+for (let i = 0; i<nodeList.length;i++){
+    nodeList[i].style.backgroundColor = 'red'
+};
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
