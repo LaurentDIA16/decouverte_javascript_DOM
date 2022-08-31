@@ -2,15 +2,13 @@ let elemButton = document.getElementsByTagName("button");
 let button1 = elemButton[0];
 button1.addEventListener("click",recupereUL);
 
-
 function recupereUL(){
-    
+    // le DOM va chercher la 2e balise ul du fichier HTML et donner les textes associés
     let text = document.getElementsByTagName("ul")[1].outerText;
-    console.log(text);
     alert("Voici les animaux de la liste: \n "+ text);
-    console.log(document.getElementById("nouvelleListe"))
+
+    // on va aller mettre la liste d'animaux à l'endroit de l'ID "nouvelleListe"
     document.getElementById("nouvelleListe").innerHTML = text;
-    
 }
 
 /** frigo pkst 9 10  evenementiel (old skill)
