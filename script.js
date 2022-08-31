@@ -1,13 +1,17 @@
-alert("hello");
 let elemButton = document.getElementsByTagName("button");
-let bouton2 = elemButton[1];
-bouton2.addEventListener(
-    "click",
-    function () {
-        let today = "28/02/20220";
-        let message = new Date();
-        alert("je viens le " + today + "et plus préceisément le" + message);
-});
+let button1 = elemButton[0];
+button1.addEventListener("click",recupereUL);
+
+
+function recupereUL(){
+    
+    let text = document.getElementsByTagName("ul")[1].outerText;
+    console.log(text);
+    alert("Voici les animaux de la liste: \n "+ text);
+    console.log(document.getElementById("nouvelleListe"))
+    document.getElementById("nouvelleListe").innerHTML = text;
+    
+}
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
