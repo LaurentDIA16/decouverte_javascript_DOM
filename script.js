@@ -47,20 +47,42 @@ function nomPropre() {
 }
 
 //--------------------------------------------------------------------------------------
-//Serie 1 exo ALGO - ALG01 - Epeler
+//Serie 1 exo ALGO - ALG01 - Epeler avec méthode SPLIT()
 
 let elemButtonQua = document.getElementsByTagName("button");
 let button4 = elemButtonQua[3];
-button4.addEventListener("click",Epeler);
+button4.addEventListener("click",EpelerSplit);
 
-function Epeler(motAEpeler,){
+function EpelerSplit(motAEpeler){
     motAEpeler=prompt("Entrez un mot ou une expression:");
-    let maj = motAEpeler.toUpperCase();
-    let array = maj.split("");
+    let maj = motAEpeler.toUpperCase(); //mettre variable en majuscule
+    let array = maj.split(""); //séparé es caractères avec une virgule et les mettres dans une table
     alert(array);
-    document.getElementById("motEpeler").innerHTML = array;
+    document.getElementById("motEpelerSplit").innerHTML = array;
 }
 
+//-------------------------------------------------------------------------------------------
+// Serie 1 exo ALGO - ALG01 - Epeler avec boucle FOR
+
+let elemButtonCin = document.getElementsByTagName("button");
+let button5 = elemButtonCin[4];
+button5.addEventListener("click",EpelerFor);
+
+function EpelerFor(motAEpeler,){
+    let motEpele =""; //variable qui va stocker le mot final
+    motAEpeler=prompt("Entrez un mot ou une expression:");
+    let maj = motAEpeler.toUpperCase(); //Mettre la variable en majuscule
+
+    //Boucle FOR sur chaque caractères de la variable motAEpeler
+        for (let i = 0;i < maj.length;i++){
+            let n = maj[i];
+            motEpele = motEpele + (n + ","); //Après chaque caractères on met une virgule
+        }
+        motEpele = motEpele.substring(0,motEpele.length-1); //On enlève le dernier caratère de la chaine de caractère
+        document.getElementById("motEpelerFor").innerHTML = motEpele; //On va insérer dans la page HTML la variable motEpele dans la div motEpeler
+    }
+  
+//--------------------------------------------------------------------------------
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
