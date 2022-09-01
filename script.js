@@ -12,21 +12,55 @@ function recupereUL(){
     // on va aller mettre la liste d'animaux à l'endroit de l'ID "nouvelleListe"
     document.getElementById("nouvelleListe").innerHTML = text;
 }
-
+//--------------------------------------------------------------------------------------
 // Création de la Function recupereUL en actionnant le bouton DEUX et querySelector
 let elemButtonbis = document.getElementsByTagName("button");
 let button2 = elemButtonbis[1];
 button1.addEventListener("click",recupereUL2);
+console.log(button2);
 
 function recupereUL2(){
-
-
-}
-// Utilisation de querySelectorAll
-const nodeList= document.querySelectorAll("ul");
-for (let i = 0; i<nodeList.length;i++){
-    nodeList[i].style.backgroundColor = 'red'
+    // Utilisation de querySelectorAll
+    const nodeList= document.querySelectorAll("li");
+    for (let i = 0; i<nodeList.length;i++){
+    nodeList[i].style.backgroundColor = 'pink'
+    }
 };
+
+
+//--------------------------------------------------------------------------------------
+//Serie 1 exo ALGO - ALG00 - nomPropre
+let elemButtonTer = document.getElementsByTagName("button");
+let button3 = elemButtonTer[2];
+button3.addEventListener("click",nomPropre);
+
+function nomPropre() {
+    let mot;
+    let reste;
+    let maj;
+    mot=prompt("Entrez un nom:");
+    mot = mot.toLowerCase();
+    maj = mot.charAt(0);
+    maj = maj.toUpperCase();
+    reste = mot.substring(1);
+    return mot = alert(maj.concat(reste));
+}
+
+//--------------------------------------------------------------------------------------
+//Serie 1 exo ALGO - ALG01 - Epeler
+
+let elemButtonQua = document.getElementsByTagName("button");
+let button4 = elemButtonQua[3];
+button4.addEventListener("click",Epeler);
+
+function Epeler(motAEpeler,){
+    motAEpeler=prompt("Entrez un mot ou une expression:");
+    let maj = motAEpeler.toUpperCase();
+    let array = maj.split("");
+    alert(array);
+    document.getElementById("motEpeler").innerHTML = array;
+}
+
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
