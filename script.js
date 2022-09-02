@@ -1,10 +1,12 @@
 // ALGO 02 - VOYELLES ET CONSONNES
-// Méthode la plus nul avec les voyelles détaillé une a une
+// Méthode en utilisant une liste de voyelles et de consonnes avec une méthode string.includes()
 let elemButtonsix = document.getElementsByTagName("button");
 let button6 = elemButtonsix[5];
 button6.addEventListener("click",analyser);
 
     function analyser() {
+        let voyelle = "aeiouy";
+        let consonne = "bcdfghjklmnpqrstvwxz";
         let mot = "alain est la";
         let lettre;
         let nbV = 0;
@@ -13,42 +15,49 @@ button6.addEventListener("click",analyser);
 
         for (pos = 0; pos < mot.length; pos++){
             lettre = mot[pos];
-            if (lettre == "a" || lettre == "e" || lettre == "i" || lettre == "o"|| lettre == "o" || lettre == "y") {
+            if (voyelle.includes(lettre)) {
                 nbV += 1;
                 console.log("voyelle " + lettre + " en position " + pos);
-            } else {
+            } else if (consonne.includes(lettre)) {
                 nbC += 1;
             }
         }
         console.log("texte de "+ mot.length + " caractères");
-        console.log(nbV + " voyelles et " + (nbC-2) + " consonnes");
+        console.log(nbV + " voyelles et " + nbC + " consonnes");
     }
 
 
 
 
+    /*
+    // ALGO 02 - VOYELLES ET CONSONNES
+    // Méthode la plus nul avec les voyelles détaillé une a une
+    let elemButtonsix = document.getElementsByTagName("button");
+    let button6 = elemButtonsix[5];
+    button6.addEventListener("click",analyser);
+
+        function analyser() {
+            let mot = "alain est la";
+            let lettre;
+            let nbV = 0;
+            let pos;
+            let nbC = 0;
+
+            for (pos = 0; pos < mot.length; pos++){
+                lettre = mot[pos];
+                if (lettre == "a" || lettre == "e" || lettre == "i" || lettre == "o"|| lettre == "o" || lettre == "y") {
+                    nbV += 1;
+                    console.log("voyelle " + lettre + " en position " + pos);
+                } else {
+                    nbC += 1;
+                }
+            }
+            console.log("texte de "+ mot.length + " caractères");
+            console.log(nbV + " voyelles et " + (nbC-2) + " consonnes");
+        }
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    //let voyelle = "aeiouy";
-    //let consonne = "bcdfghjklmnpqrstvwxz";
     
     
     /*
