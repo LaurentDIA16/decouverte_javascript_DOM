@@ -14,21 +14,14 @@ function recupereUL(){
 }
 
 // Création de la Function recupereUL en actionnant le bouton DEUX et querySelector
-<<<<<<< HEAD
 let elemButton2 = document.getElementsByTagName("button");
 let button22 = elemButtonbis[1];
 button2.addEventListener("click",recupereUL2);
-=======
-let elemButtonbis = document.getElementsByTagName("button");
-let button2 = elemButtonbis[1];
-button1.addEventListener("click",recupereUL2);
->>>>>>> parent of d4720ba (00 Exo 2 - Continuer sur manipulation du querySelector)
 
 function recupereUL2(){
 
 
 }
-<<<<<<< HEAD
 
 
 //----------------------------------------------------------------------
@@ -103,13 +96,6 @@ function EpelerFor(motAEpeler,){
     }
   
 //--------------------------------------------------------------------------------
-=======
-// Utilisation de querySelectorAll
-const nodeList= document.querySelectorAll("ul");
-for (let i = 0; i<nodeList.length;i++){
-    nodeList[i].style.backgroundColor = 'red'
-};
->>>>>>> parent of d4720ba (00 Exo 2 - Continuer sur manipulation du querySelector)
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
