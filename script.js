@@ -5,28 +5,44 @@ button1.addEventListener("click",recupereUL);
 
 function recupereUL(){
     // le DOM va chercher la 2e balise ul du fichier HTML et donner les textes associés
-    let text = document.getElementsByTagName("ul")[1].innerHTML;
-    console.log(text)
-    alert("Voici les animaux de la liste: \n "+ text);
+    //let text = document.getElementsByTagName("ul")[1].innerHTML;
+    //let text = document.querySelectorAll('ul#animals')[1];
+   
+    let myNodelist = document.querySelectorAll("ul#animals")[0].innerHTML;
+    console.log(myNodelist);
+    alert("Voici les animaux de la liste: \n "+ myNodelist);
 
+    for (let i = 0; i < myNodelist.length; i++) {
+      myNodelist[i].backgroundColor = "red";
+    }
     // on va aller mettre la liste d'animaux à l'endroit de l'ID "nouvelleListe"
-    document.getElementById("nouvelleListe").innerHTML = text;
+    document.getElementById("nouvelleListe").innerHTML = myNodelist;
+    myNodelist.querySelector("#nouvelleListe").style.backgroundColor = "clear grey"
+    myNodelist.querySelector("#newAnimals").border = "10px solid black"
+    
+    //const items = document.getElementsByClassName("item");
 }
+//--------------------------------------------------------------------
 
 // Création de la Function recupereUL en actionnant le bouton DEUX et querySelector
 let elemButtonbis = document.getElementsByTagName("button");
 let button2 = elemButtonbis[1];
-button1.addEventListener("click",recupereUL2);
+button2.addEventListener("click",recupereUL2);
 
 function recupereUL2(){
-
+    // Utilisation de querySelectorAll
+    const nodeList= document.querySelectorAll("ul");
+    for (let i = 0; i<nodeList.length;i++){
+    nodeList[i].style.backgroundColor = 'red';
+    };
+    document.querySelector("h1").style.backgroundColor = "blue"
+    document.querySelector("section > h1").style.backgroundColor = "blue"
+    document.querySelector("div > p").style.backgroundColor = "green"
 
 }
-// Utilisation de querySelectorAll
-const nodeList= document.querySelectorAll("ul");
-for (let i = 0; i<nodeList.length;i++){
-    nodeList[i].style.backgroundColor = 'red'
-};
+
+
+//----------------------------------------------------------------------
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
