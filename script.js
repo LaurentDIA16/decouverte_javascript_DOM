@@ -5,41 +5,30 @@ button1.addEventListener("click",recupereUL);
 
 function recupereUL(){
     // le DOM va chercher la 2e balise ul du fichier HTML et donner les textes associés
-    //let text = document.getElementsByTagName("ul")[1].innerHTML;
-    //let text = document.querySelectorAll('ul#animals')[1];
-   
-    let myNodelist = document.querySelectorAll("ul#animals")[0].innerHTML;
-    console.log(myNodelist);
-    alert("Voici les animaux de la liste: \n "+ myNodelist);
+    let text = document.getElementsByTagName("ul")[1].innerHTML;
+    console.log(text)
+    alert("Voici les animaux de la liste: \n "+ text);
 
-    for (let i = 0; i < myNodelist.length; i++) {
-      myNodelist[i].backgroundColor = "red";
-    }
     // on va aller mettre la liste d'animaux à l'endroit de l'ID "nouvelleListe"
-    document.getElementById("nouvelleListe").innerHTML = myNodelist;
-    myNodelist.querySelector("#nouvelleListe").style.backgroundColor = "clear grey"
-    myNodelist.querySelector("#newAnimals").border = "10px solid black"
-    
-    //const items = document.getElementsByClassName("item");
+    document.getElementById("nouvelleListe").innerHTML = text;
 }
-//--------------------------------------------------------------------
 
 // Création de la Function recupereUL en actionnant le bouton DEUX et querySelector
+<<<<<<< HEAD
 let elemButton2 = document.getElementsByTagName("button");
 let button22 = elemButtonbis[1];
 button2.addEventListener("click",recupereUL2);
+=======
+let elemButtonbis = document.getElementsByTagName("button");
+let button2 = elemButtonbis[1];
+button1.addEventListener("click",recupereUL2);
+>>>>>>> parent of d4720ba (00 Exo 2 - Continuer sur manipulation du querySelector)
 
 function recupereUL2(){
-    // Utilisation de querySelectorAll
-    const nodeList= document.querySelectorAll("ul");
-    for (let i = 0; i<nodeList.length;i++){
-    nodeList[i].style.backgroundColor = 'red';
-    };
-    document.querySelector("h1").style.backgroundColor = "blue"
-    document.querySelector("section > h1").style.backgroundColor = "blue"
-    document.querySelector("div > p").style.backgroundColor = "green"
+
 
 }
+<<<<<<< HEAD
 
 
 //----------------------------------------------------------------------
@@ -114,6 +103,13 @@ function EpelerFor(motAEpeler,){
     }
   
 //--------------------------------------------------------------------------------
+=======
+// Utilisation de querySelectorAll
+const nodeList= document.querySelectorAll("ul");
+for (let i = 0; i<nodeList.length;i++){
+    nodeList[i].style.backgroundColor = 'red'
+};
+>>>>>>> parent of d4720ba (00 Exo 2 - Continuer sur manipulation du querySelector)
 
 /** frigo pkst 9 10  evenementiel (old skill)
  * forme facile à comprendre , mais à ne plus utiliser 
