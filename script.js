@@ -1,41 +1,40 @@
-// ALGO 02 - VOYELLES ET CONSONNES
-/** Méthode en utilisant avec une entré de valeur depuis un champ texte (input) du HTML
-    Utilisation d'une liste de voyelles et de consonnes avec une méthode string.includes()
-*/
-
-//Entrée de la valeur dans le champ texte et déclenchement de la fonction en appuyant Enter
-const alg02 = document.getElementById('ALG02');
-alg02.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-        analyser(event);
-    }
-});
-
-    function analyser(event) {
-        const mot = event.target.value
-        let voyelle = "aeiouy";
-        let consonne = "bcdfghjklmnpqrstvwxz";
-        let lettre;
-        let nbV = 0;
-        let pos;
-        let nbC = 0;
-
-        for (pos = 0; pos < mot.length; pos++){
-            lettre = mot[pos];
-            if (voyelle.includes(lettre)) {
-                nbV += 1;
-                console.log("voyelle " + lettre + " en position " + pos);
-            } else if (consonne.includes(lettre)) {
-                nbC += 1;
-            }
+//ALGO 02 - VOYELLES ET CONSONNES
+    /** Méthode en utilisant avec une entré de valeur depuis un champ texte (input) du HTML
+        Utilisation d'une liste de voyelles et de consonnes avec une méthode string.includes()
+    */
+/*Entrée de la valeur dans le champ texte et déclenchement de la fonction en appuyant Enter
+    const alg02 = document.getElementById('ALG02');
+    alg02.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter') {
+            analyser(event);
         }
-        console.log("texte de "+ mot.length + " caractères");
-        console.log(nbV + " voyelles et " + nbC + " consonnes");
-    }
+    });
 
+        function analyser(event) {
+            const mot = event.target.value
+            let voyelle = "aeiouy";
+            let consonne = "bcdfghjklmnpqrstvwxz";
+            let lettre;
+            let nbV = 0;
+            let pos;
+            let nbC = 0;
 
-/*
-    // ALGO 02 - VOYELLES ET CONSONNES
+            for (pos = 0; pos < mot.length; pos++){
+                lettre = mot[pos];
+                if (voyelle.includes(lettre)) {
+                    nbV += 1;
+                    
+                    console.log("voyelle " + lettre + " en position " + pos);
+                } else if (consonne.includes(lettre)) {
+                    nbC += 1;
+                }
+            }
+            console.log("texte de "+ mot.length + " caractères");
+            console.log(nbV + " voyelles et " + nbC + " consonnes");
+        }
+
+*/
+/**  ALGO 02 - VOYELLES ET CONSONNES
     // Méthode en utilisant une liste de voyelles et de consonnes avec une méthode string.includes()
     let elemButtonsix = document.getElementsByTagName("button");
     let button6 = elemButtonsix[5];
@@ -64,8 +63,6 @@ alg02.addEventListener('keydown', (event) => {
         }
 -----------------------------------------------------------------------------------------------------------
 
-
-    /*
     // ALGO 02 - VOYELLES ET CONSONNES
     // Méthode la plus nul avec les voyelles détaillé une a une
     let elemButtonsix = document.getElementsByTagName("button");
@@ -220,9 +217,6 @@ function monAction() {
     alert( "nous sommes le " + today + " \n " + message  ) ;
 }
 
-*/
-
-
 /** frigo pkst 11 11bis evenementiel (new skill)
  * utilisation du DOM + fonction
  *
@@ -250,8 +244,6 @@ function monAction() {
     alert( "nous sommes le " + today + " \n " + message  ) ;
 }
 
-*/
-
 /** frigo pkst 12 evenementiel (new new skill)
  * utilisation du DOM + fonction anonyme
  *
@@ -268,8 +260,6 @@ bouton2.addEventListener(
         alert( "nous sommes le " + today + " \n " + message  ) ;
     }   
 );
-
-*/
 
 /** frigo pkst 13 13bis evenementiel (new new new skill)
  * utilisation du DOM  + notation fléchée
@@ -299,8 +289,6 @@ document.getElementsByTagName("button")[1].addEventListener("click",
     }   
 );
 
-*/
-
 /** frigo pkst 14 evenementiel (new new new skill démo )
  * collection clickable = nouvelle instruction  for .. of  
  * voir https://www.zendevs.xyz/les-boucles-for-foreach-each-en-javascript/
@@ -316,9 +304,6 @@ for (let e of document.getElementsByTagName("button") ) {
         alert( "nous sommes le " + today + " \n " + message  ) ;
     });
 }   
-
-*/
-
 
 /** frigo pkst 15 dom
  * diverses manipulations du dom (en lecture, en ecriture)
@@ -346,5 +331,3 @@ message += "e.style.fontSize ......(" + e.style.fontSize    + ")\n";
 //console.log( message); 
 //let e2  = document.getElementById("art1a2").children[1] ;
 //e2.innerText = message ;
-
-*/
